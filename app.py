@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-from crypt import methods
 from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for
 
@@ -57,5 +55,4 @@ def exit_post():
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    app.debug = True
-    app.run(host='127.0.0.1', port=80)
+    app.run(host ='0.0.0.0',port = 8080, threaded=True, debug=True)
