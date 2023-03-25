@@ -18,6 +18,16 @@ https://"IPアドレス":8080
 ```
 で入室者一覧のページを見ることができる
 
+一覧ページは5秒毎にリロードされる
+
+時間を変更したい場合は/templates/index.htmlで
+```
+<SCRIPT LANGUAGE="JavaScript">
+  setTimeout("location.reload()",1000*5);
+</SCRIPT>
+```
+を変更する
+
 一覧から"入室する"、"退出する"のボタンを押すか
 ```
 https://"IPアドレス":8080/entry
